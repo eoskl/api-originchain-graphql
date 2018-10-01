@@ -1,0 +1,10 @@
+type XyoBlock implements XyoObject {
+	hash: String!
+	bytes: String!
+	major: Int!
+	minor: Int!
+	publicKeys: [XyoKeySet!]
+	signatures: [XyoSignatureSet!]
+	payloads: [XyoPayload!]
+	signedBytes: String!
+}

@@ -1,7 +1,0 @@
-type XyoSignatureSet implements XyoObject {
-  hash: String!
-  bytes: String!
-  major: Int!
-  minor: Int!
-  array: [XyoObject!]
-}

@@ -1,0 +1,3 @@
+type BlockByHash {
+  block (blockHash : String!): XyoBlock
+}
