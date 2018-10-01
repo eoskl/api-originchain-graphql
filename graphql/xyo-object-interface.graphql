@@ -1,0 +1,6 @@
+interface XyoObject {
+	hash: String!
+  	bytes: String!
+  	major: Int!
+  	minor: Int!
+}

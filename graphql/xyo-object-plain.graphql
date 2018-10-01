@@ -1,0 +1,6 @@
+type XyoPlainObject implements XyoObject {
+  hash: String!
+  bytes: String!
+  major: Int!
+  minor: Int!
+}
