@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Monday, 1st October 2018 12:09:43 pm
+ * @Last modified time: Monday, 1st October 2018 12:26:02 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -28,10 +28,10 @@ module.exports = (() => {
     getSchema: () => {
       return files.reduce((promiseChain, fileName) => {
         return promiseChain.then(schema => {
-            return readFile(`./graphql/${fileName}`, 'utf8')
+            var fileLocation = path.resolve(__dirname, `./graphql/${fileName}`)
+            return readFile(fileLocation, 'utf8')
               .then(file => {
-                schema[fileName] = file;
-                schema.stitched += `\n# ${fileName}\n${file}\n`;
+                schema += `\n# ${fileName}\n${file}\n`;
                 return schema;
               })
               .catch(err => {
@@ -39,7 +39,7 @@ module.exports = (() => {
                 throw err;
               })
           })
-      }, Promise.resolve({stitched: ''}));
+      }, Promise.resolve(''));
     }
   }
 })();
