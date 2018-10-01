@@ -4,13 +4,14 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Monday, 1st October 2018 12:26:02 pm
+ * @Last modified time: Monday, 1st October 2018 12:31:37 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
 
 var fs = require('fs');
 var promisify = require('util').promisify;
+var path = require('path');
 var readFile = promisify(fs.readFile);
 
 var files = [
