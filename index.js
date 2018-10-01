@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Monday, 1st October 2018 12:31:37 pm
+ * @Last modified time: Monday, 1st October 2018 12:45:31 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -19,28 +19,38 @@ var files = [
   'xyo-block.graphql',
   'xyo-object-interface.graphql',
   'xyo-payload.graphql',
-  'xyo-block-query.graphql',
   'xyo-keyset.graphql',
   'xyo-object-plain.graphql',
-  'xyo-signature-set.graphql'
+  'xyo-signature-set.graphql',
+  'xyo-blocks-by-public-key-query.graphql'
 ]
+
 module.exports = (() => {
   return {
     getSchema: () => {
       return files.reduce((promiseChain, fileName) => {
-        return promiseChain.then(schema => {
+        return promiseChain.then(memo => {
             var fileLocation = path.resolve(__dirname, `./graphql/${fileName}`)
             return readFile(fileLocation, 'utf8')
               .then(file => {
-                schema += `\n# ${fileName}\n${file}\n`;
-                return schema;
+                memo.schema += `\n# ${fileName}\n${file}\n`;
+                var isQuery = /query/.test(fileName);
+                if (isQuery) {
+                  memo.queries = memo.queries || {};
+                  memo.queries[fileName] = file;
+                } else {
+                  memo.types = memo.types || {};
+                  memo.types[fileName] = file;
+                }
+
+                return memo;
               })
               .catch(err => {
                 console.error(`There was an error getting file ${fileName}`);
                 throw err;
               })
           })
-      }, Promise.resolve(''));
+      }, Promise.resolve({schema: ''}));
     }
   }
 })();
