@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Monday, 1st October 2018 12:40:41 pm
+ * @Last modified time: Monday, 1st October 2018 12:45:31 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -19,11 +19,12 @@ var files = [
   'xyo-block.graphql',
   'xyo-object-interface.graphql',
   'xyo-payload.graphql',
-  'xyo-block-query.graphql',
   'xyo-keyset.graphql',
   'xyo-object-plain.graphql',
-  'xyo-signature-set.graphql'
+  'xyo-signature-set.graphql',
+  'xyo-blocks-by-public-key-query.graphql'
 ]
+
 module.exports = (() => {
   return {
     getSchema: () => {
