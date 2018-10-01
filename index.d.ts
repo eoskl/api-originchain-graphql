@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.d.ts
  * @Last modified by: ryanxyo
- * @Last modified time: Monday, 1st October 2018 12:47:32 pm
+ * @Last modified time: Monday, 1st October 2018 1:36:50 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -22,7 +22,7 @@ export interface XyoOriginChainGraphqlSchema {
 export interface XyoOriginGraphqlNodeV1 {
   schema: string;
   queries: {
-    'xyo-blocks-by-public-key-query.graphql': string
+    'xyo-blocks-by-public-key.graphql': string
   };
   types: {
     'xyo-block-collection.graphql': string
