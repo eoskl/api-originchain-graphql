@@ -3,6 +3,6 @@ type XyoPayload implements XyoObject {
 	bytes: String!
 	major: Int!
 	minor: Int!
-	signedPayload: [XyoObject!],
-	unsignedPayload: [XyoObject!],
+	signedPayload: [XyoPlainObject!],
+	unsignedPayload: [XyoPlainObject!],
 }

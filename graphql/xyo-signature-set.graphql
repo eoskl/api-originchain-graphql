@@ -3,5 +3,5 @@ type XyoSignatureSet implements XyoObject {
 	bytes: String!
 	major: Int!
 	minor: Int!
-	array: [XyoObject!]
+	array: [XyoPlainObject!]
 }

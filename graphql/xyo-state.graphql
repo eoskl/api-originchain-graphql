@@ -1,6 +1,6 @@
 type XyoState {
 	index: Int!
 	root: String!
-	publicKeys: [XyoObject]!
-	nextPublicKey: XyoObject
+	publicKeys: [XyoPlainObject!]!
+	nextPublicKey: XyoPlainObject
 }

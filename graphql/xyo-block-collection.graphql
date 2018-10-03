@@ -1,4 +1,4 @@
 type XyoBlockCollection {
 	publicKey: String!
-	blocks: [XyoBlock]
+	blocks: [XyoBlock!]
 }
