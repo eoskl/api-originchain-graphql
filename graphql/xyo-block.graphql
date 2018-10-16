@@ -7,4 +7,5 @@ type XyoBlock implements XyoObject {
 	signatures: [XyoSignatureSet!]
 	payloads: [XyoPayload!]
 	signedBytes: String!
+	signedHash: String!
 }
