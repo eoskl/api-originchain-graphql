@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Wednesday, 3rd October 2018 3:49:27 pm
+ * @Last modified time: Monday, 15th October 2018 12:02:46 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -22,7 +22,8 @@ var files = [
   'xyo-block-collection.graphql',
   'xyo-blocks-by-public-key.graphql',
   'xyo-object-interface.graphql',
-  'xyo-payload.graphql'
+  'xyo-payload.graphql',
+  'xyo-about-me.graphql'
 ]
 
 module.exports = (() => {

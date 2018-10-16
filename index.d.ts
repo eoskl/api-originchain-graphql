@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.d.ts
  * @Last modified by: ryanxyo
- * @Last modified time: Wednesday, 3rd October 2018 3:50:16 pm
+ * @Last modified time: Monday, 15th October 2018 12:03:29 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -26,7 +26,8 @@ declare module '@xyo-network/api-originchain-graphql' {
       'xyo-block-collection.graphql': string,
       'xyo-blocks-by-public-key.graphql': string,
       'xyo-object-interface.graphql': string,
-      'xyo-payload.graphql': string
+      'xyo-payload.graphql': string,
+      'xyo-about-me.graphql': string
     }
   }
 
