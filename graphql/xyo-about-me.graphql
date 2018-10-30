@@ -3,5 +3,6 @@ type XyoAboutMe {
   version: String,
   ip: String,
   graphqlPort: Int,
-  nodePort: Int
+  nodePort: Int,
+  address: String
 }
