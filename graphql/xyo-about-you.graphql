@@ -1,9 +1,9 @@
-type XyoAboutMe {
+input XyoAboutYou {
   name: String,
   version: String,
   ip: String,
   graphqlPort: Int,
   nodePort: Int,
   address: String,
-  peers: [XyoAboutMe]
+  peers: [XyoAboutYou]
 }

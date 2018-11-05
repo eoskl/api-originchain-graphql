@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Thursday, 18th October 2018 1:45:03 pm
+ * @Last modified time: Thursday, 1st November 2018 5:12:14 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -14,31 +14,32 @@ var promisify = require('util').promisify;
 var path = require('path');
 var readFile = promisify(fs.readFile);
 
-var files = [
-  'xyo-block.graphql',
-  'xyo-keyset.graphql',
-  'xyo-object-plain.graphql',
-  'xyo-signature-set.graphql',
-  'xyo-block-collection.graphql',
-  'xyo-blocks-by-public-key.graphql',
-  'xyo-object-interface.graphql',
-  'xyo-payload.graphql',
-  'xyo-about-me.graphql',
-  'xyo-list-meta.graphql',
-  'xyo-list.graphql',
-  'xyo-block-list.graphql'
-]
+var files = {
+  'xyo-block.graphql': 'types',
+  'xyo-keyset.graphql': 'types',
+  'xyo-object-plain.graphql': 'types',
+  'xyo-signature-set.graphql': 'types',
+  'xyo-block-collection.graphql': 'types',
+  'xyo-blocks-by-public-key.graphql': 'types',
+  'xyo-object-interface.graphql': 'types',
+  'xyo-payload.graphql': 'types',
+  'xyo-about-me.graphql': 'types',
+  'xyo-list-meta.graphql': 'types',
+  'xyo-list.graphql': 'types',
+  'xyo-block-list.graphql': 'types',
+  'xyo-about-you.graphql': 'inputs',
+}
 
 module.exports = (() => {
   return {
     getSchema: () => {
-      return files.reduce((promiseChain, fileName) => {
+      return Object.keys(files).reduce((promiseChain, fileName) => {
         return promiseChain.then(memo => {
             var fileLocation = path.resolve(__dirname, 'graphql', fileName)
             return readFile(fileLocation, 'utf8')
               .then(file => {
                 memo.schema += `\n# ${fileName}\n${file}\n`;
-                memo.types[fileName] = file;
+                memo[files[fileName]][fileName] = file;
                 return memo;
               })
               .catch(err => {
@@ -46,7 +47,7 @@ module.exports = (() => {
                 throw err;
               })
           })
-      }, Promise.resolve({schema: '', types: {}}));
+      }, Promise.resolve({schema: '', types: {}, inputs: {}}));
     }
   }
 })();
