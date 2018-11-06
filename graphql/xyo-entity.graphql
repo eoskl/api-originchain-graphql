@@ -1,0 +1,8 @@
+type XyoEntity {
+  firstKnownPublicKey: String!
+  allPublicKeys: [String!]!
+  type: XyoEntityType!
+  mostRecentIndex: Int!
+  mostRecentBlockHash: String!
+  mostRecentPublicKeys: [String!]!
+}

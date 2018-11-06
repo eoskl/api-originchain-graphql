@@ -1,0 +1,4 @@
+type XyoEntitiesList implements List {
+  meta: ListMeta!
+  items: [XyoEntity!]!
+}

@@ -1,0 +1,6 @@
+type XyoEntityType {
+  sentinel: Boolean!,
+  bridge: Boolean!,
+  archivist: Boolean!,
+  diviner: Boolean!
+}

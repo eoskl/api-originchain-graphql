@@ -4,7 +4,7 @@
  * @Email:  developer@xyfindables.com
  * @Filename: index.js
  * @Last modified by: ryanxyo
- * @Last modified time: Thursday, 1st November 2018 5:12:14 pm
+ * @Last modified time: Monday, 5th November 2018 2:58:38 pm
  * @License: All Rights Reserved
  * @Copyright: Copyright XY | The Findables Company
  */
@@ -22,6 +22,9 @@ var files = {
   'xyo-block-collection.graphql': 'types',
   'xyo-blocks-by-public-key.graphql': 'types',
   'xyo-object-interface.graphql': 'types',
+  'xyo-entity-type.graphql': 'types',
+  'xyo-entity.graphql': 'types',
+  'xyo-entities-list.graphql': 'types',
   'xyo-payload.graphql': 'types',
   'xyo-about-me.graphql': 'types',
   'xyo-list-meta.graphql': 'types',
