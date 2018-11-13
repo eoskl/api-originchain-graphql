@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/api-originchain-graphql",
-  "version": "0.1.96",
+  "version": "0.1.98",
   "description": "A shared GraphQL schema to share across projects",
   "main": "index.js",
   "types": "index.d.ts",
