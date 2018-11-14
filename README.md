@@ -4,7 +4,7 @@
 
 # XYO Graphql schemas (api-origin-graplql)
 
-The main schemas for origin chain related items.
+The main schemas for origin chain related items
 
 ## License
 
