@@ -1,10 +1,11 @@
 {
   "name": "@xyo-network/api-originchain-graphql",
-  "version": "0.1.98",
+  "version": "0.1.106",
   "description": "A shared GraphQL schema to share across projects",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/api-originchain-graphql.git",
   "author": "Ryan Pillsbury <ryan@xyo.network>",
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "5326ed67182f211129f77581f0bd61d252702721"
 }
