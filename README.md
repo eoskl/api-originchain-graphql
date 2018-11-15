@@ -2,9 +2,19 @@
 
 ![logo]
 
-# XYO Graphql schemas (api-origin-graplql)
+# XYO Graphql schemas (api-origin-graphql)
 
-The main schemas for origin chain related items
+The main schemas for origin chain related items. These can be used in any number of ways. For JavaScript projects they are available through `npm`
+
+```sh
+  yarn add @xyo-network/api-originchain-graphql
+```
+
+or using `npm`
+
+```sh
+  npm install @xyo-network/api-originchain-graphql --save
+```
 
 ## License
 
